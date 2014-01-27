@@ -1,0 +1,10 @@
+<%# form_for :zipcode, :url => { action: 'create', zipcode: @zipcode} do |f| %>
+
+<%= form_for @zipcode, :url => find_rep_path, :html => {:method => :post} do |f| %>
+
+  <%= f.label :zipcode %>:
+  <%= f.text_field :zipcode %>
+
+  <%= f.submit "Submit" %>
+
+<% end %>
